@@ -50,7 +50,7 @@
             android:text="Full name"/>
 
         <EditText
-            android:id="@+id/edFullname"
+            android:id="@+id/edFullnameSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name "
@@ -62,10 +62,72 @@
             android:layout_marginTop="20dp"
             android:text="email"/>
         <EditText
+            android:id="@+id/emailSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
             android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Password"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PasswordSignup"
+            android:hint="Create a password"
+            android:inputType="textPassword"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/confrimationPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="I want to.."/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnBuyer"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Buy"/>
+            <Button
+                android:id="@+id/btnSeller"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Seller"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:text="Create Account"/>
+
 
 
 

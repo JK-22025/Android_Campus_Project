@@ -82,9 +82,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirm Password"
-            android:padding="12dp"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginTop="20dp"
+            android:text="Confirm Password"/>
 
         <EditText
             android:id="@+id/confrimationPassword"
@@ -103,20 +102,53 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnBuyer"
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="96dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:text="Buy"/>
-            <Button
-                android:id="@+id/btnSeller"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnBuyer"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:contentDescription="Buy"
+                    android:src="@drawable/ic_shopping_cart_24"
+                    android:scaleType="center"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#3B5BDB"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Buy"
+                    android:textColor="#1F2328"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="96dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:text="Seller"/>
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnSeller"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:contentDescription="Sell"
+                    android:src="@drawable/ic_front_store"
+                    android:scaleType="center"
+                    app:tint="#5F6368"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Seller"
+                    android:textColor="#1F2328"
+                    android:textStyle="bold"/>
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -124,9 +156,25 @@
 
         <Button
             android:id="@+id/btnCreateAccount"
-            android:layout_width="0dp"
-            android:layout_height="96dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
             android:text="Create Account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textColor="#5F6368"
+            android:textSize="15sp"/>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:textColor="#3B5BDB"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
 
 
 

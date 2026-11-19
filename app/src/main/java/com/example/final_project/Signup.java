@@ -56,6 +56,21 @@ public class Signup extends AppCompatActivity {
             }
         });
 
+//        Sellbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent()
+//            }
+//        });
+
+
+//        Buybtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+
         BtnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

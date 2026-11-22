@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Signup extends AppCompatActivity {
     EditText emailEditText, passwordEditText, confirmPassEditText, FullnameEditText;
@@ -120,6 +121,17 @@ public class Signup extends AppCompatActivity {
                 }
             }
         });
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(Signup.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
 

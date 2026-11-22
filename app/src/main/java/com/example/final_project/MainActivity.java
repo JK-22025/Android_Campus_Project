@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -12,8 +13,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
     Button Btnlogin, Btnsignup;
+    TextView email;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
         Btnsignup = findViewById(R.id.btnSignup);
         Btnlogin = findViewById(R.id.btnSignin);
+        firebaseAuth = FirebaseAuth.getInstance();
+        email = findViewById(R.id.showEmail);
+
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        String emailUser = "";
+        if(currentUser != null){
+            emailUser = currentUser.getEmail();
+            email.setText(emailUser);
+
+        }
 
         Btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
